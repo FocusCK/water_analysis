@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}Water Analysis Input Form{% endblock %}
+
+{% block content %}
+<h2>Please populate the fields making note of the unit of measurement</h2>
+<form action="{{ url_for('analyze') }}" method="'POST">
+    <label for="ph">PH</label>
+    <input type="number" name="ph" id="ph" required>
+
+    <label for="iron">Iron (µg/l Fe)</label>
+    <input type="number" name="iron" id="iron">
+
+    <label for="total-coliforms">Total Coliforms (MPN per 100ml)</label>
+    <input type="number" name="total-coliforms" id="total-coliforms">
+
+    <label for="e-coli">E-Coli (MPN per 100ml)</label>
+    <input type="number" name="e-coli" id="e-coli">
+
+    <label for="iron">Iron (µg/l Fe)</label>
+    <input type="number" name="iron" id="iron">
+
+    <label for="manganese">Manganese (µg/l Mn)</label>
+    <input type="number" name="manganese" id="manganese">
+
+    <label for="nitrite">Nitrite (mg/l NO2)</label>
+    <input type="number" name="nitrite" id="nitrite">
+
+    <label for="nitrate">Nitrate (mg/l NO3)</label>
+    <input type="number" name="nitrate" id="nitrate">
+
+    <label for="arsenic">Arsenic (ug/l As)</label>
+
+    <label for="hardness">Hardness (mg/l CaCO3)</label>
+    <input type="number" name="hardness" id="hardness">
+
+    <button type="submit">Submit</button>
+</form>
+
+{% endblock %}
