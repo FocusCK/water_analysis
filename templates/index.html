@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Water Analysis Application{% endblock %}
+
+{% block content %}
+    <h1>
+        Welcome to the Water Test Analysis Application
+    </h1>
+    <p>
+        Use this application as a guide for selecting the correct water treatment to ensure safe water is supplied to you or your customers home.
+    </p>
+    <a href="{{ url_for('analyze') }}">Begin your analysis</a>
+    {% endblock %}
