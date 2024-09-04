@@ -11,6 +11,25 @@ def home():
 @app.route('/analyze', methods=['GET', 'POST'])
 def analyze():
     if request.method == 'POST':
+        ph = int(request.form['ph'])
+        total_coliforms = int(request.form['total-coliforms'])
+        e_coli = int(request.form['e-coli'])
+        iron = int(request.form.get('iron'))
+        manganese = int(request.form['manganese'])
+        nitrite = int(request.form['nitrite'])
+        nitrate = int(request.form['nitrate'])
+        arsenic = int(request.form['arsenic'])
+        # Use ['hardness', 0] to default to 0 if no value is provided as hardness poses no health risk
+        hardness = int(request.form['hardness'])
+
+
+        # Placeholer for results
+        results = {
+
+
+        }
+
+
         # To handle form submission
         return render_template('results.html')
     return render_template('form.html')
