@@ -25,8 +25,15 @@ def analyze():
 
         # Placeholer for results
         results = {
-
-
+            'ph': ph,
+            'total-coliforms': total_coliforms,
+            'e-coli': e_coli,
+            'iron': iron,
+            'manganese': manganese,
+            'nitrite': nitrite,
+            'nitrate': nitrate,
+            'arsenic': arsenic,
+            'hardness': hardness
         }
 
 
