@@ -1,0 +1,19 @@
+{% extendss 'base.html' %}
+
+{% block title %}Water Analysis <Results>% endblock %</Results>
+
+{% block content %}
+    <h2>Water Test Results</h2>
+    <p><strong>pH:</strong> {{ results['ph'] }}</p>
+    <p><strong>Total Coliforms (MPN per 100ml):</strong> {{ results['total-coliforms'] }}</p>
+    <p><strong>E-Coli (MPN per 100ml):</strong> {{ results['e-coli'] }}</p>
+    <p><strong>Iron (µg/l Fe):</strong> {{ results['iron'] }}</p>
+    <p><strong>Manganese (µg/l Mn):</strong> {{ results['manganese'] }}</p>
+    <p><strong>Nitrite (mg/l NO2):</strong> {{ results['nitrite'] }}</p>
+    <p><strong>Nitrate (mg/l NO3):</strong> {{ results['nitrate'] }}</p>
+    <p><strong>Arsenic (µg/l As):</strong> {{ results['arsenic'] }}</p>
+    <p><strong>Hardness (mg/l CaCO3):</strong> {{ results['hardness'] }}</p>
+
+<!-- Use this section for recommended water treatment -->
+
+{% endblock %}
