@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 
-{% block title %}Water Analysis <Results>% endblock %</Results>
+{% block title %}Water Analysis Results{% endblock %}
 
 {% block content %}
     <h2>Water Test Results</h2>
+    <div class="results">
     <p><strong>pH:</strong> {{ results['ph'] }}</p>
     <p><strong>Total Coliforms (MPN per 100ml):</strong> {{ results['total-coliforms'] }}</p>
     <p><strong>E-Coli (MPN per 100ml):</strong> {{ results['e-coli'] }}</p>
@@ -15,5 +16,5 @@
     <p><strong>Hardness (mg/l CaCO3):</strong> {{ results['hardness'] }}</p>
 
 <!-- Use this section for recommended water treatment -->
-
+    </div>
 {% endblock %}
