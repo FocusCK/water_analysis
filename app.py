@@ -93,7 +93,7 @@ def analyze():
             results['hardness_recommendation'] = "No action needed. Hardness levels are within an acceptable range."
 
             # To handle form submission
-        return render_template('results.html')
+        return render_template('results.html', results=results)
     return render_template('form.html')
 
 # Analysis Results Page
