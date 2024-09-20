@@ -1,3 +1,5 @@
+from app import db
+
 class WaterTest(db.Model):
     # Water test results table
     id = db.Column(db.Integer, primary_key=True)
@@ -27,3 +29,15 @@ class Product(db.Model):
     def __repr__(self):
         return f'<Product {self.name}>'
 
+
+class Recommendation(db.Model):
+    # Add recommendations table
+    id = db.Column(db.Integer, primary_key=True)
+    test_parameter = db.Column(db.String(50))  # eg. pH, Iron, ect.
+    min_value = db.Column(db.Float)
+    max_value = db.Column(db.Float)
+    product_id = db.Column(db.Integer, db.ForeignKey('product.id'))
+    product = db.relationship('Product')
+
+    def __repr__(self):
+        return f'<Recommendation {self.test_perameter}>'
