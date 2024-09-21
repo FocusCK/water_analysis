@@ -1,12 +1,17 @@
 from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 from config import Config
+from  application.models import WaterTest, Product, Recommendation, db
 
 app = Flask(__name__)
 
 app.config.from_object(Config)
 
-db = SQLAlchemy(app)
+# db = SQLAlchemy(app)
+
+with app.app_context():
+    db.init_app(app)
+    db.create_all()
 
 # Home Page
 @app.route('/')

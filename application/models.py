@@ -1,4 +1,12 @@
-from app import db
+# from app import db
+from flask_sqlalchemy import SQLAlchemy
+
+db = SQLAlchemy()
+
+class Well(db.Model):
+    id = db.Column(db.Integer)
+    address = db.Column(db.String)
+    owner_name = db.Column(db.String)
 
 class WaterTest(db.Model):
     # Water test results table
